@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quer namorar comigo?</title>
+    <style>
+      body {
+        background-image: url("../images/background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+        padding-top: 50px;
+        margin: 0;
+        text-align: center;
+        padding-top: 50px;
+      }
+
+      button {
+        background-color: #361a1a;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 20px 40px;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        margin: 20px;
+      }
+
+      button:hover {
+        background-color: #ff9999;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: #080707">Quer namorar comigo?</h1>
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+
+    <script>
+      var nao = document.getElementById("nao");
+      nao.addEventListener("click", function () {
+        var randomX = Math.floor(
+          Math.random() * (window.innerWidth - nao.offsetWidth)
+        );
+        var randomY = Math.floor(
+          Math.random() * (window.innerHeight - nao.offsetHeight)
+        );
+        nao.style.position = "absolute";
+        nao.style.top = randomY + "px";
+        nao.style.left = randomX + "px";
+      });
+
+      var sim = document.getElementById("sim");
+      sim.addEventListener("click", function () {
+        window.open("https://www.youtube.com/watch?v=Ar48yzjn1PE", "_blank");
+      });
+    </script>
+  </body>
+</html>
